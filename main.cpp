@@ -6,8 +6,7 @@
 using namespace std;
 
 # // Supported OS:
-# // - Windows
-# // - Linux
+# ONLY WINDOWS
 
 
 // абстрактный класс
