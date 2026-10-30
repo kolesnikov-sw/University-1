@@ -3,14 +3,23 @@
 #include <time.h>
 #include "load.h"
 
+#ifdef _WIN32
+#include <windows.h>
+#define ARRAY_LIB "./array.dll"
+#define MATRIX_LIB "./matrix.dll"
+#else
 #define ARRAY_LIB "./libarray.so"
 #define MATRIX_LIB "./libmatrix.so"
+#endif
 
 int main(void)
 {
     int choice;
     int x, y;
 
+#ifdef _WIN32
+    SetConsoleOutputCP(CP_UTF8);
+#endif
     srand((unsigned int)time(NULL));
 
     while (1)
